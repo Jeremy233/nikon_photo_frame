@@ -1,0 +1,60 @@
+Image Make: NIKON CORPORATION
+Image Model: NIKON Z 7_2
+Image XResolution: 240
+Image YResolution: 240
+Image ResolutionUnit: Pixels/Inch
+Image Software: Adobe Photoshop Lightroom Classic 13.2 (Macintosh)
+Image DateTime: 2024:02:21 15:40:38
+Image Artist: JeremyJez
+Image Copyright: JeremyJez
+Image ExifOffset: 272
+Thumbnail Compression: JPEG (old-style)
+Thumbnail XResolution: 72
+Thumbnail YResolution: 72
+Thumbnail ResolutionUnit: Pixels/Inch
+Thumbnail JPEGInterchangeFormat: 1116
+Thumbnail JPEGInterchangeFormatLength: 13639
+EXIF ExposureTime: 1/1000
+EXIF FNumber: 4
+EXIF ExposureProgram: Aperture Priority
+EXIF ISOSpeedRatings: 64
+EXIF SensitivityType: Recommended Exposure Index
+EXIF RecommendedExposureIndex: 64
+EXIF ExifVersion: 0231
+EXIF DateTimeOriginal: 2024:02:16 13:06:40
+EXIF DateTimeDigitized: 2024:02:16 13:06:40
+EXIF OffsetTime: -05:00
+EXIF OffsetTimeOriginal: -05:00
+EXIF OffsetTimeDigitized: -05:00
+EXIF ShutterSpeedValue: 1245723/125000
+EXIF ApertureValue: 4
+EXIF ExposureBiasValue: -1/3
+EXIF MeteringMode: Pattern
+EXIF LightSource: Unknown
+EXIF Flash: Flash did not fire
+EXIF FocalLength: 115
+EXIF SubSecTimeOriginal: 02
+EXIF SubSecTimeDigitized: 02
+EXIF ColorSpace: sRGB
+EXIF FocalPlaneXResolution: 75409805/32768
+EXIF FocalPlaneYResolution: 75409805/32768
+EXIF FocalPlaneResolutionUnit: 3
+EXIF SensingMethod: One-chip color area
+EXIF FileSource: Digital Camera
+EXIF SceneType: Directly Photographed
+EXIF CVAPattern: [2, 0, 2, 0, 0, 1, 1, 2]
+EXIF CustomRendered: Custom
+EXIF ExposureMode: Auto Exposure
+EXIF WhiteBalance: Auto
+EXIF FocalLengthIn35mmFilm: 115
+EXIF SceneCaptureType: Standard
+EXIF GainControl: None
+EXIF Contrast: Normal
+EXIF Saturation: Normal
+EXIF Sharpness: Soft
+EXIF SubjectDistanceRange: 0
+EXIF BodySerialNumber: 8007420
+EXIF LensSpecification: [24, 120, 4, 4]
+EXIF LensMake: NIKON
+EXIF LensModel: NIKKOR Z 24-120mm f/4 S
+EXIF LensSerialNumber: 20118026
