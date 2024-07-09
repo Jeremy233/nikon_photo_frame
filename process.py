@@ -17,13 +17,18 @@ def get_info(tags):
     image_camera = better_nikon_model(image_camera)
     image_focal_length = str(tags['EXIF FocalLength']) + "mm"
     image_exposure_time = str(tags['EXIF ExposureTime']) + "s"
-    image_aperture = "f" + str(tags['EXIF FNumber'])
+    value = tags['EXIF FNumber'].values
+    numerator, denominator = value[0].num, value[0].den
+    if (numerator % denominator == 0):
+        image_aperture = "f" + str(numerator // denominator)
+    else:
+        image_aperture = "f" + str(numerator / denominator)
     image_iso = "ISO" + str(tags['EXIF ISOSpeedRatings'])
     image_lens = str(tags['EXIF LensModel'])
     info = f"{image_camera} | {image_focal_length} | {image_exposure_time} | {image_aperture} | {image_iso} | {image_lens}"
     return info
 
-def add_padding(input_image_path, output_image_path, text, font_size, padding=800, format='JPEG'):
+def add_padding(input_image_path, output_image_path, text, font_size, compress, padding=800, format='JPEG'):
     # read image and resize
     original_img = Image.open(input_image_path)
     original_width, original_height = original_img.size
@@ -54,20 +59,31 @@ def add_padding(input_image_path, output_image_path, text, font_size, padding=80
     text_x = (new_width - text_width) / 2
     text_y = paste_pos_y + scaled_height + 25
     draw.text((text_x, text_y), text, fill="white", font=font, align="center")
+    if compress:
+        compressed_image = padded_img.resize((7680, 4320), Image.LANCZOS)
+        compressed_image.save(output_image_path, 'JPEG', quality=100)
+    else: 
+        padded_img.save(output_image_path, 'JPEG', quality=100)
 
-    padded_img.save(output_image_path, 'JPEG', quality=100)
-
-def main(in_path, out_path):
+def main(in_path, out_path, compress=False):
     for i in tqdm(os.listdir(in_path)):
+        if i == ".DS_Store":
+            continue
         with open(os.path.join(in_path, i), 'rb') as f:
             tags = exifread.process_file(f)
             text = get_info(tags)
-            add_padding(os.path.join(in_path, i), os.path.join(out_path, i), text, 200, padding=800, format='JPEG')
+            # print(text)
+            add_padding(os.path.join(in_path, i), os.path.join(out_path, i), text, font_size=200, compress=compress, padding=800, format='JPEG')
 
 if __name__ == "__main__":
     in_path = "/Users/jeremy/Desktop/photo_frame/nikon_photo_frame/input"
     out_path = "/Users/jeremy/Desktop/photo_frame/nikon_photo_frame/output"
-    main(in_path, out_path)
+    print("Need compress?")
+    compress = input()
+    if compress == "yes":
+        main(in_path, out_path, compress=True)
+    else:
+        main(in_path, out_path)
 
 
 
